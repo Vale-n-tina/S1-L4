@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  height: 800px;
+  align-items: center;
+  font-family: "Creepster", system-ui;
+}
+
+section {
+  background-color: #666666;
+  height: 500px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+.postIt {
+  width: 20%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.7rem;
+  font-size: 2rem;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.58);
+  transition: transform 0.5s linear 0s;
+  
+}
+.uno,
+.cinque,
+.sette {
+  background-color: #f8f8c6;
+}
+.due,
+.quattro,
+.otto {
+  background-color: #c7f5c8;
+}
+.tre,
+.sei {
+  background-color: #c7c7f5;
+}
+.uno,
+.sei {
+  transform: rotate(-6deg);
+}
+.due,
+.otto {
+  transform: rotate(5deg) translateY(10px);
+}
+.tre {
+  transform: rotate(-6deg);
+}
+.quattro {
+  transform: rotate(10deg);
+}
+.cinque,
+.sette {
+  transform: rotate(-5deg);
+}
+.postIt:hover {
+  transform: scale(1.3, 1.3);
+  z-index: 1;
+}
+@keyframes noshadow{
+    0%{
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.58)
+    }
+    20%{
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4)
+    }
+    50%{
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.26)
+    }
+    70%{
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.15)
+    }
+    100%{
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0)
+    }
+}
+.postIt2{
+    animation: noshadow 1s linear 1  backwards;
+}
